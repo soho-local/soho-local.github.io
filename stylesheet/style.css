@@ -30,14 +30,6 @@ code {
 	font-size: 11px;
 }
 
-.header {
-	position: fixed;
-	padding: 10px 5px;
-	margin: 0 auto;
-	top:0;
-	text-align: left;
-}
-
 .flash_button {
 	background:purple;
 	padding:1px 3px;
@@ -75,6 +67,7 @@ code {
 	max-width: 600px;
 	padding: 10px 5px;
 	margin: 0 auto;
+	top: 66px;
 }
 
 .topright {
@@ -84,4 +77,12 @@ code {
 	top:0;
 	text-align: right;
 	right:0;
+}
+.topleft {
+	position: fixed;
+	padding: 10px 5px;
+	margin: 0 auto;
+	top:0;
+	text-align: left;
+	left: 0;
 }
