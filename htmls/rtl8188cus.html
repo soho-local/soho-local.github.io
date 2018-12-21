@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheet/style.css">
+
+    <title>Lance Wu</title>
+  </head>
+
+  <body>
+	  <!-- HEADER -->
+	  <div class="header">
+          <h1>Lance Wu</h1>
+	  <h4>C'est la vie; C'est ma vie.</h4>
+          <h5>Raspberry Pi, Linux, BSD, HAM</h5>
+	  </div>
+	  
+	  <div class="topright">
+		  <p><a href="../index.html">Back</a></p>
+	  </div>
+
+    <!-- MAIN CONTENT -->
+   <div class="outer">
+	    <section class="inner">
+		    <h3><b>Use USB WLAN Adapter RTL8188CUS on laptop</b></h3>
+		    <h5>December 20, 2018</h5>
+		    <p>Today, the laptop WiFi connection is not stable. I check the syslog under path /var/log/, there are lots Error lines as below:</p>
+		    <code>"Dec 21 02:04:39 kernel: [55551.703385] ieeee80211 phy0: rt2x00usb_vendor_request: Error - Vendor Request 0x06 failed for offset 0x3040 with error -110"</code>
+		    <p>Soon later, the built-in wifi device stops working.</p>
+		    <p>Run <b><i>lsusb</i></b>:</p>
+		    <code>Bus 003 Device 006: ID 0db0:6877 Micro Star International RT2573<br>Bus 003 Device 005: ...</code>
+		    <p>I have an idle Raspberry PI B+ without Memory Card but has a USB WLAN Adapter pluged. I unplug it from Raspberry PI B+ and plug it into laptop.</p>
+		    <p>Run <b><i>lsusb</i></b>:</p>
+		    <code>Bus 003 Device 006: ID 0db0:6877 Micro Star International RT2573<br>Bus 003 Device 005: ...<br>Bus 003 Device 003: 0bda:8176 Realtek Semiconductor Corp. RTL8188CUS 802.11n WLAN Adapter.</code>
+		    <p>That's great, system found it, I don't have to install the driver. The next thing is to configure Network Manager using this new device. Thing does not go well.</p>
+		    <p>Run <b><i>ip addr ls</i></b>:</p>
+		    <code>...<br>4: wlxe84exxxxx593 BROADCAST,MULTICAST,<b><i>DOWN</i></b>,LOWER_UP mtu 1500 qdisc mq state Down group default qlen 1000<br>...</code>
+		    <p>Run <b><i>sudo ip link set wlxe84exxxxx593 up</i></b>:</p>
+		    <code>4: wlxe84exxxxx593 BROADCAST,MULTICAST,<b><i>UP</i></b>,LOWER_UP mtu 1500 qdisc mq state Down group default qlen 1000<br>...</code>
+		    <p>Without IP address.<br>Run <b><i>sudo iwlist wlxe84exxxxx593 scanning</i></b>, following with normal results. I search on <a href="https://wiki.debian.org/WiFi/HowToUse#WiFi_can_scan.2C_but_not_connect_using_NetworkManager_.28Debian_9_Stretch.29">debian wiki</a>, which states:</p>
+		    <code>"WiFi can scan, but not connect using NetworkManager (Debian 9 Stretch).<br><br>If you find that your wireless network device can scan, but will not complete connecting, try turning off MAC address randomization.<br><br>Write inside /etc/NetworkManager/NetworkManager.conf:<br><br>[device]<br>wifi.scan-rand-mac-address=no"</code>
+		    <p>I follow above steps. After restarting Network Manager, RTL8188CUS gets IP and works much stable without any warning or error in syslog.</p>
+	    </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div class="footer">
+        <p>&copy;2017-2019, Lance Wu </p>
+    </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,87 @@
+body {
+	background-color: lightblue;
+}
+
+img {
+	width: 43%;
+}
+
+table {
+	text-align: center;
+}
+
+h1,h2,h3,h4 {
+	color: purple;
+	text-align: left;
+}
+
+h5 {
+	color: green;
+	text-align: left;
+}
+
+p {
+	font-family: verdana;
+	font-size: 11px;
+}
+
+code {
+	font-family: verdana;
+	font-size: 11px;
+}
+
+.header {
+	position: fixed;
+	padding: 10px 5px;
+	margin: 0 auto;
+	top:0;
+	text-align: left;
+}
+
+.flash_button {
+	background:purple;
+	padding:1px 3px;
+	color:#fff;
+	border:none;
+	border-radius:3px;
+
+	animation-name: flash;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes flash {
+	0% { opacity: 1.0; }
+	50% { opacity: 0.5; }
+	100% { opacity: 1.0; }
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	color: purple;
+}
+
+.outer {
+	width: 100%;
+}
+
+.inner {
+	position: relative;
+	max-width: 600px;
+	padding: 10px 5px;
+	margin: 0 auto;
+}
+
+.topright {
+	position: fixed;
+	padding: 10px 5px;
+	margin: 0 auto;
+	top:0;
+	text-align: right;
+	right:0;
+}
