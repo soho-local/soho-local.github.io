@@ -38,17 +38,18 @@
 		    <p>I have an idle Raspberry PI B+ without Memory Card but has a USB WLAN Adapter pluged. I unplug it from Raspberry PI B+ and plug it into laptop.</p>
 		    <table><td>
 		    /home/user>lsusb<br><br>
-		    Bus 003 Device 006: ID 0db0:6877 Micro Star International RT2573<br>Bus 003 Device 005: ...<br>Bus 003 Device 003: 0bda:8176 Realtek Semiconductor Corp. RTL8188CUS 802.11n WLAN Adapter.
+		    Bus 003 Device 006: ID 0db0:6877 Micro Star International RT2573<br>Bus 003 Device 005: ...<br>Bus 003 Device 003: ID 0bda:8176 Realtek Semiconductor Corp. RTL8188CUS 802.11n WLAN Adapter.
 		    </td></table>
 		    <p>That's great, system found it, I don't have to install the driver. The next thing is to configure Network Manager using this new device. Thing does not go well.</p>
 		    <table><td>
-		    /home/user>ip addr ls<br><br>
+		    /home/user>ip addr ls<br>
 		    ...<br>4: wlxe84exxxxx593 BROADCAST,MULTICAST,<b><i>DOWN</i></b>,LOWER_UP mtu 1500 qdisc mq state Down group default qlen 1000<br>...
 		    </td></table>
 		    <p>Continue.</p>
 		    <table><td>
-		    /home/user>sudo ip link set wlxe84exxxxx593 up<br><br>
-		    4: wlxe84exxxxx593 BROADCAST,MULTICAST,<b><i>UP</i></b>,LOWER_UP mtu 1500 qdisc mq state Down group default qlen 1000<br>...
+		    /home/user>sudo ip link set wlxe84exxxxx593 up<br>
+		    /home/user>sudo ip addr ls<br>
+		    ...<br>4: wlxe84exxxxx593 BROADCAST,MULTICAST,<b><i>UP</i></b>,LOWER_UP mtu 1500 qdisc mq state Down group default qlen 1000<br>...
 		    </td></table>
 		    <p>Without IP address.<br>Run <b><i>sudo iwlist wlxe84exxxxx593 scanning</i></b>, following with normal results. I search on <a href="https://wiki.debian.org/WiFi/HowToUse#WiFi_can_scan.2C_but_not_connect_using_NetworkManager_.28Debian_9_Stretch.29">debian wiki</a>, which states:</p>
 		    <table><td>
