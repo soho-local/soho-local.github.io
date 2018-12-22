@@ -1,5 +1,5 @@
 body {
-	background-color: lightblue;
+	background-color: darkseagreen;
 }
 
 img {
@@ -26,11 +26,6 @@ h5 {
 }
 
 p {
-	font-family: verdana;
-	font-size: 11px;
-}
-
-code {
 	font-family: verdana;
 	font-size: 11px;
 }
@@ -72,7 +67,8 @@ code {
 	max-width: 600px;
 	padding: 10px 5px;
 	margin: 0 auto;
-	top: 0;
+	top: 66px;
+	z-index: -1;
 }
 
 .topright {
@@ -81,9 +77,11 @@ code {
 	text-align: right;
 	right:0;
 }
-.topleft {
-	position: relative;
+.topbar {
+	position: fixed;
 	top:0;
-	text-align: left;
-	left: 0;
+	width: 100%;
+	background-color: darkslategrey;
+	opacity: 1.0;
+	left:0;
 }
