@@ -53,8 +53,8 @@ p {
 	position: fixed;
 	left: 0;
 	bottom: 0;
-	width: 100%;
 	text-align: center;
+	width: 100%;
 	color: purple;
 }
 
@@ -81,7 +81,7 @@ p {
 	position: fixed;
 	top:0;
 	width: 100%;
-	background-color: darkslategrey;
+	background-color: cadetblue;
 	opacity: 0.95;
 	left:0;
 }
