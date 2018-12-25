@@ -3,7 +3,7 @@ body {
 }
 
 img {
-	width: 43%;
+	width: 16%;
 }
 
 table {
@@ -77,7 +77,7 @@ p {
 	text-align: right;
 	right:0;
 }
-.topbar {
+.navbar {
 	position: fixed;
 	top:0;
 	width: 100%;
