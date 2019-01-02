@@ -4,15 +4,15 @@
   <head>
     <meta charset='utf-8' />
     <link rel="stylesheet" type="text/css" media="screen" href="../stylesheet/style.css"/>
-    <title>C'est La Vie</title>
-    <link rel="shotcut icon" href="../LaVie.jpg"/>
+    <title>C'est la vie</title>
+    <link rel="shotcut icon" href="../Lavie.jpg"/>
   </head>
 
   <body>
 	  <!-- HEADER -->
 	<div class="navbar">
 		<table><tr>
-				<td><a href="../index.html"><img src="../LaVie.jpg"></a></td>
+				<td><a href="../index.html"><img src="../Lavie.jpg"></a></td>
 				<td><h2>RPi, Linux, BSD, HAM, Hiking</h2></td>
 		</tr></table>
 	</div>
@@ -22,8 +22,7 @@
 	  </div>
 
     <!-- MAIN CONTENT -->
-   <div class="outer">
-	    <section class="inner">
+   <div class="inner">
 		    <h3><b>Use USB WLAN Adapter RTL8188CUS on laptop</b></h3>
 		    <h5>December 20, 2018</h5>
 		    <p>Today, the laptop WiFi connection is not stable. I check the syslog under path /var/log/, there are lots Error lines as below:</p>
@@ -57,8 +56,7 @@
 		    WiFi can scan, but not connect using NetworkManager (Debian 9 Stretch).<br><br>If you find that your wireless network device can scan, but will not complete connecting, try turning off MAC address randomization.<br><br>Write inside /etc/NetworkManager/NetworkManager.conf:<br><br>[device]<br>wifi.scan-rand-mac-address=no
 		    </td></table>
 		    <p>I follow above steps. After restarting Network Manager, RTL8188CUS gets IP and works much stable without any warning or error in syslog.</p>
-		    <p style="text-align:right">The End.</p>
-	    </section>
+		    <h5>The End.</h5>
     </div>
 
     <!-- FOOTER  -->

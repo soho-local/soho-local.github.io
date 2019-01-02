@@ -68,7 +68,7 @@ p {
 	padding: 10px 5px;
 	margin: 0 auto;
 	top: 66px;
-	z-index: -1;
+	z-index: 0;
 }
 
 .topright {
@@ -76,6 +76,7 @@ p {
 	top:0;
 	text-align: right;
 	right:0;
+	z-index: 1;
 }
 .navbar {
 	position: fixed;
@@ -84,4 +85,5 @@ p {
 	background-color: cadetblue;
 	opacity: 0.95;
 	left:0;
+	z-index: 1;
 }
