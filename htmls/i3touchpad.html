@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheet/style.css"/>
+    <title>C'est la vie</title>
+    <link rel="shortcut icon" href="../Lavie.jpg"/>
+  </head>
+
+  <body>
+	  <!-- HEADER -->
+	<div class="navbar">
+		<h2>RPi, Linux, BSD, HAM, Hiking</h2>
+	</div>
+	  
+	  <div class="topright">
+		  <h4><a href="../index.html">Back</a></h4>
+	  </div>
+
+    <!-- MAIN CONTENT -->
+   <div class="inner">
+	    <h3><b>Fix the issue of touchpad not working in i3wm</b></h3>
+	    <h5>January 11, 2019</h5>
+	    <p>When first log into i3wm, I found that the touchpad did not work in click and scroll. I googled and get the command "synclient" to use for checking the running values of touchpad. Then type following commands to fix the issue.</p>
+	    <table>
+		    <tr><td>synclient TapButton1=1</td></tr>
+		    <tr><td>synclient TapButton2=1</td></tr>
+		    <tr><td>synclient VertEdgeScroll=1</td></tr>
+		    <tr><td>synclient HorizEdgeScroll=1</td></tr>
+	    </table>
+	    <p>Or, just write them into i3 config file.</p>
+
+		<h5>The End.</h5>
+   </div>
+
+    <div class="footer">
+	    <p>&copy;2017-2019, <a href="https://soho-local.github.io">Lance Wu</a></p>
+    </div>
+
+  </body>
+</html>
