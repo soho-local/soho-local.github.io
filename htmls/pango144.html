@@ -21,25 +21,27 @@
     <!-- MAIN CONTENT -->
    <div class="outer">
 	    <section class="inner">
-		    <h3><b>A try on i3 for after upgrade pango from 1.42 to 1.44 which dropped supporting ttf fonts.</b></h3>
+		    <h3><b>A try on i3wm for after upgrade pango from 1.42 to 1.44 which dropped supporting ttf fonts.</b></h3>
 		    <h5>April 14, 2020</h5>
 		<p>On April 12, 2020, once I completed my daily update on debian testing, I found that the fonts now only show rectangies instead of characters. And more, this situation exist anywhere except terminal and firefox. I checked the details of apt history under path /var/log/apt/: </p>
-		<table><td>Start-Date: 2020-04-12  10:50:23
-Commandline: apt upgrade
-Requested-By: xxxxxxxx (x)
-Install: systemd-timesyncd:i386 (245.4-3, automatic)
-Upgrade: xserver-xorg-input-synaptics:i386 (1.9.1-1, 1.9.1-2), libpangoft2-1.0-0:i386 (1.42.4-8, 1.44.7-3), libsystemd0:i386 (244.3-1, 245.4-3), apt:i386 (2.0.1, 2.0.2), libsrtp2-1:i386 (2.3.0-3, 2.3.0-4), python-tk:i386 (2.7.17-2, 2.7.18-1), libigdgmm11:i386 (19.4.1+ds1-1, 20.1.1+ds1-1), libqscintilla2-qt5-15:i386 (2.11.2+dfsg-6, 2.11.2+dfsg-6+b1), gir1.2-pango-1.0:i386 (1.42.4-8, 1.44.7-3), python3-idna:i386 (2.8-1, 2.8-2), udev:i386 (244.3-1, 245.4-3), libapt-pkg6.0:i386 (2.0.1, 2.0.2), dh-strip-nondeterminism:i386 (1.6.3-2, 1.7.0-1), libjetty9-java:i386 (9.4.26-1, 9.4.27-1), libudev1:i386 (244.3-1, 245.4-3), python3-cups:i386 (1.9.73-3, 1.9.73-3+b1), libfile-stripnondeterminism-perl:i386 (1.6.3-2, 1.7.0-1), libxml-commons-resolver1.1-java:i386 (1.2-9, 1.2-10), libpangoxft-1.0-0:i386 (1.42.4-8, 1.44.7-3), libnautilus-extension1a:i386 (3.36.1-1, 3.36.1.1-1), python3-cryptography:i386 (2.8-3+b1, 2.8-4), libpangocairo-1.0-0:i386 (1.42.4-8, 1.44.7-3), libprotobuf-lite22:i386 (3.11.4-3, 3.11.4-4), systemd-sysv:i386 (244.3-1, 245.4-3), libpam-systemd:i386 (244.3-1, 245.4-3), systemd:i386 (244.3-1, 245.4-3), python3-gst-1.0:i386 (1.16.2-2, 1.16.2-2+b1), apt-utils:i386 (2.0.1, 2.0.2), libnss-systemd:i386 (244.3-1, 245.4-3), logrotate:i386 (3.16.0-2, 3.16.0-3), libprotobuf22:i386 (3.11.4-3, 3.11.4-4), libpango-1.0-0:i386 (1.42.4-8, 1.44.7-3)
+		<table><td>Start-Date: 2020-04-12  10:50:23<br>
+				Commandline: apt upgrade<br>
+				Requested-By: xxxxxxxx (x)<br>
+				Install: systemd-timesyncd:i386 (245.4-3, automatic)<br>
+				Upgrade: xserver-xorg-input-synaptics:i386 (1.9.1-1, 1.9.1-2), libpangoft2-1.0-0:i386 (1.42.4-8, 1.44.7-3), libsystemd0:i386 (244.3-1, 245.4-3), apt:i386 (2.0.1, 2.0.2), libsrtp2-1:i386 (2.3.0-3, 2.3.0-4), python-tk:i386 (2.7.17-2, 2.7.18-1), libigdgmm11:i386 (19.4.1+ds1-1, 20.1.1+ds1-1), libqscintilla2-qt5-15:i386 (2.11.2+dfsg-6, 2.11.2+dfsg-6+b1), gir1.2-pango-1.0:i386 (1.42.4-8, 1.44.7-3), python3-idna:i386 (2.8-1, 2.8-2), udev:i386 (244.3-1, 245.4-3), libapt-pkg6.0:i386 (2.0.1, 2.0.2), dh-strip-nondeterminism:i386 (1.6.3-2, 1.7.0-1), libjetty9-java:i386 (9.4.26-1, 9.4.27-1), libudev1:i386 (244.3-1, 245.4-3), python3-cups:i386 (1.9.73-3, 1.9.73-3+b1), libfile-stripnondeterminism-perl:i386 (1.6.3-2, 1.7.0-1), libxml-commons-resolver1.1-java:i386 (1.2-9, 1.2-10), libpangoxft-1.0-0:i386 (1.42.4-8, 1.44.7-3), libnautilus-extension1a:i386 (3.36.1-1, 3.36.1.1-1), python3-cryptography:i386 (2.8-3+b1, 2.8-4), libpangocairo-1.0-0:i386 (1.42.4-8, 1.44.7-3), libprotobuf-lite22:i386 (3.11.4-3, 3.11.4-4), systemd-sysv:i386 (244.3-1, 245.4-3), libpam-systemd:i386 (244.3-1, 245.4-3), systemd:i386 (244.3-1, 245.4-3), python3-gst-1.0:i386 (1.16.2-2, 1.16.2-2+b1), apt-utils:i386 (2.0.1, 2.0.2), libnss-systemd:i386 (244.3-1, 245.4-3), logrotate:i386 (3.16.0-2, 3.16.0-3), libprotobuf22:i386 (3.11.4-3, 3.11.4-4), libpango-1.0-0:i386 (1.42.4-8, 1.44.7-3)<br>
 End-Date: 2020-04-12  10:55:03</td></table>
-		    <p>Not know how it changed yet, I did some research on google. Pango 1.44 removed support for bitmap fonts. Applications that use Pango and that are configured to use bitmap fonts come with bad font rendering. One way works as following:</p>
-		    <p>1. Download terminus-font-otb 4.48-1 from archlinux.org (terminus-font-otb-4.48-1-any.pkg.tar.xz)</p>
-		    <p>2. 7z x terminux-font-otb-4.48-1.any.pkg.tar.xz</p>
-		    <p>3. cd usr/share/fonts</p>
-		    <p>4. cp *.otb ~/.local/share/fonts/misc/</p>
-		    <p>5. sudo apt remove xfonts-terminus</p>
-		    <p>6. fc-cache -f .local/share/fonts</p>
-		    <p>7. fc-list | grep ter</p>
-		    <p>8. vi .config/i3/config</p>
-		    <p>9. font pango:Terminus 8</p>
+		    <p>Not know what exactly the thing changed, after some research on google I noticed that Pango 1.44 has removed support for bitmap fonts. Applications that use Pango and that are configured to use bitmap fonts come with bad font rendering. One way works as following:</p>
+		    <table><td>
+		    1. Download terminus-font-otb 4.48-1 from archlinux.org (terminus-font-otb-4.48-1-any.pkg.tar.xz)<br>
+		    2. 7z x terminux-font-otb-4.48-1.any.pkg.tar.xz<br>
+		    3. cd usr/share/fonts<br>
+		    4. cp *.otb ~/.local/share/fonts/misc/<br>
+		    5. sudo apt remove xfonts-terminus<br>
+		    6. fc-cache -f .local/share/fonts<br>
+		    7. fc-list | grep ter<br>
+		    8. vi .config/i3/config<br>
+		    9. font pango:Terminus 8<br>
+		    </td></table>
 		    <h5>The End.</h5>
     <div class="footer">
 	    <p>&copy;2017-2020, <a href="https://soho-local.github.io">Lance Wu</a></p>
