@@ -3,7 +3,8 @@ body {
 }
 
 img {
-	box-shadow: 1px 2px 4px darkorange;
+	box-shadow: 1px 3px 11px darkorange;
+	border: 1px outset green;
 }
 
 table {
